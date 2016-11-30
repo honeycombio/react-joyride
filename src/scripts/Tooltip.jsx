@@ -294,6 +294,17 @@ export default class JoyrideTooltip extends React.Component {
       </a>);
     }
 
+    if (buttons.primary) {
+      output.primary = (<a
+        href="#"
+        className="joyride-tooltip__button joyride-tooltip__button--primary"
+        style={styles.buttons.primary}
+        data-type={['single', 'casual'].indexOf(type) > -1 ? 'close' : 'next'}
+        onClick={onClick}>
+        {buttons.primary}
+      </a>);
+    }
+
     if (step.event === 'hover') {
       styles.buttons.close.opacity = 0;
     }
@@ -314,14 +325,7 @@ export default class JoyrideTooltip extends React.Component {
         <div className="joyride-tooltip__footer">
           {output.skip}
           {output.secondary}
-          <a
-            href="#"
-            className="joyride-tooltip__button joyride-tooltip__button--primary"
-            style={styles.buttons.primary}
-            data-type={['single', 'casual'].indexOf(type) > -1 ? 'close' : 'next'}
-            onClick={onClick}>
-            {buttons.primary}
-          </a>
+          {output.primary}
         </div>
       </div>
     );

@@ -848,6 +848,10 @@ export default class Joyride extends React.Component {
         }
       }
 
+      if (currentStep.hidePrimaryButton) {
+        buttons.primary = undefined;
+      }
+
       component = React.createElement(Tooltip, {
         animate: state.xPos > -1 && !state.redraw,
         buttons,
