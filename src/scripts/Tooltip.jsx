@@ -1,25 +1,26 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { browser } from './utils';
 
 export default class JoyrideTooltip extends React.Component {
   static propTypes = {
-    animate: React.PropTypes.bool.isRequired,
-    buttons: React.PropTypes.object.isRequired,
-    cssPosition: React.PropTypes.string.isRequired,
-    disableOverlay: React.PropTypes.bool,
-    onClick: React.PropTypes.func.isRequired,
-    onRender: React.PropTypes.func.isRequired,
-    showOverlay: React.PropTypes.bool.isRequired,
-    standalone: React.PropTypes.bool,
-    step: React.PropTypes.object.isRequired,
-    type: React.PropTypes.string.isRequired,
-    xPos: React.PropTypes.oneOfType([
-      React.PropTypes.number,
-      React.PropTypes.string
+    animate: PropTypes.bool.isRequired,
+    buttons: PropTypes.object.isRequired,
+    cssPosition: PropTypes.string.isRequired,
+    disableOverlay: PropTypes.bool,
+    onClick: PropTypes.func.isRequired,
+    onRender: PropTypes.func.isRequired,
+    showOverlay: PropTypes.bool.isRequired,
+    standalone: PropTypes.bool,
+    step: PropTypes.object.isRequired,
+    type: PropTypes.string.isRequired,
+    xPos: PropTypes.oneOfType([
+      PropTypes.number,
+      PropTypes.string
     ]).isRequired,
-    yPos: React.PropTypes.oneOfType([
-      React.PropTypes.number,
-      React.PropTypes.string
+    yPos: PropTypes.oneOfType([
+      PropTypes.number,
+      PropTypes.string
     ]).isRequired
   };
 

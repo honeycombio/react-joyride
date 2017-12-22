@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import scroll from 'scroll';
 import autobind from 'react-autobind';
 import nested from 'nested-property';
@@ -35,26 +36,26 @@ export default class Joyride extends React.Component {
   }
 
   static propTypes = {
-    callback: React.PropTypes.func,
-    completeCallback: React.PropTypes.func,
-    debug: React.PropTypes.bool,
-    disableOverlay: React.PropTypes.bool,
-    keyboardNavigation: React.PropTypes.bool,
-    locale: React.PropTypes.object,
-    resizeDebounce: React.PropTypes.bool,
-    resizeDebounceDelay: React.PropTypes.number,
-    run: React.PropTypes.bool,
-    scrollOffset: React.PropTypes.number,
-    scrollToFirstStep: React.PropTypes.bool,
-    scrollToSteps: React.PropTypes.bool,
-    showBackButton: React.PropTypes.bool,
-    showOverlay: React.PropTypes.bool,
-    showSkipButton: React.PropTypes.bool,
-    showStepsProgress: React.PropTypes.bool,
-    stepCallback: React.PropTypes.func,
-    steps: React.PropTypes.array,
-    tooltipOffset: React.PropTypes.number,
-    type: React.PropTypes.string
+    callback: PropTypes.func,
+    completeCallback: PropTypes.func,
+    debug: PropTypes.bool,
+    disableOverlay: PropTypes.bool,
+    keyboardNavigation: PropTypes.bool,
+    locale: PropTypes.object,
+    resizeDebounce: PropTypes.bool,
+    resizeDebounceDelay: PropTypes.number,
+    run: PropTypes.bool,
+    scrollOffset: PropTypes.number,
+    scrollToFirstStep: PropTypes.bool,
+    scrollToSteps: PropTypes.bool,
+    showBackButton: PropTypes.bool,
+    showOverlay: PropTypes.bool,
+    showSkipButton: PropTypes.bool,
+    showStepsProgress: PropTypes.bool,
+    stepCallback: PropTypes.func,
+    steps: PropTypes.array,
+    tooltipOffset: PropTypes.number,
+    type: PropTypes.string
   };
 
   static defaultProps = {
